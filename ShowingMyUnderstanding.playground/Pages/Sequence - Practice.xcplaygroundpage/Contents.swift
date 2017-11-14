@@ -29,7 +29,7 @@ import Cocoa
 import PlaygroundSupport
 
 // Create canvas
-let canvas = Canvas(width: 300, height: 300)
+let canvas = Canvas(width: 500, height: 500)
 
 // No borders
 canvas.drawShapesWithBorders = false
@@ -38,6 +38,26 @@ canvas.drawShapesWithBorders = false
 canvas.defaultLineWidth = 5
 
 // Add your code below... remember to use comments to indicate your intent
+// Black Background.
+canvas.fillColor = Color.black
+canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 500, height: 500)
+// Green Circle
+canvas.fillColor = Color.init(hue: 120, saturation: 95, brightness: 100, alpha: 100)
+canvas.drawEllipse(centreX: 100, centreY: 250, width: 100, height: 100)
+canvas.lineColor = Color.init(hue: 120, saturation: 95, brightness: 100, alpha: 100)
+canvas.drawLine(fromX: 100, fromY: 200, toX: 100, toY: 150)
+// Yellow Circle
+canvas.fillColor = Color.init(hue: 60, saturation: 95, brightness: 100, alpha: 80)
+canvas.lineColor = Color.init(hue: 60, saturation: 95, brightness: 100, alpha: 80)
+canvas.drawLine(fromX: 150, fromY: 200, toX: 150, toY: 150)
+canvas.drawEllipse(centreX: 150, centreY: 250, width: 100, height: 100)
+//Red Circle
+canvas.fillColor = Color.init(hue: 0, saturation: 95, brightness: 100, alpha: 80)
+canvas.drawEllipse(centreX: 200, centreY: 250, width: 100, height: 100)
+// Blue Circle
+canvas.fillColor = Color.init(hue: 240, saturation: 95, brightness: 100, alpha: 80)
+canvas.drawEllipse(centreX: 250, centreY: 250, width: 100, height: 100)
+
 /*:
  ## Template code
  The code below is necessary to see results in the Assistant Editor at right. Please do not remove.
